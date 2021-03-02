@@ -8,7 +8,8 @@ import os
 
 import argparse
 
-from misc.dataset import Dataset, DatasetWhole, DatasetWhole_clasif, Dataset_alternative_bin
+#from misc.dataset import Dataset, DatasetWhole, DatasetWhole_clasif, Dataset_alternative_bin
+from misc.dataset import Dataset, DatasetWhole
 from misc.helpers import normalizeRNA,save_embedding
 
 from sklearn.preprocessing import MinMaxScaler

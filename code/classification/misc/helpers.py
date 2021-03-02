@@ -88,7 +88,8 @@ def to_categorical_2(data, dtype=None):
 def get_data(data):
 
     d = {}
-    clin_fold = data[["METABRIC_ID"]]
+    #clin_fold = data[["METABRIC_ID"]]
+    clin_fold = data[["ID"]]
 
     rna = data[[col for col in data if col.startswith('GE')]]
     cna = data[[col for col in data if col.startswith('CNA')]]
@@ -150,7 +151,8 @@ def get_data(data):
     # Or since we dont have that much anyway just one hot everything and use BCE Loss to train
 
     # We have to get the entire dataset, transform them into one-hots, bins
-    complete_data = r"../data/original/MBdata_33CLINwMiss_1KfGE_1KfCNA.csv"
+    #complete_data = r"../data/original/MBdata_33CLINwMiss_1KfGE_1KfCNA.csv"
+    complete_data = r"/home/ICM_CG/Projects/METABRIC/DigPath_integration/data/MBdata_33CLINwMiss_1KfGE_1KfCNA_2.csv"
     # complete_data = pd.read_csv(complete_data).set_index("METABRIC_ID")
     complete_data =  pd.read_csv(complete_data, index_col=None, header=0)
 

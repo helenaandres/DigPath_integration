@@ -8,7 +8,8 @@ import os
 
 import argparse
 
-from misc.dataset import Dataset, DatasetWhole, DatasetWhole_clasif, Dataset_alternative_bin
+#from misc.dataset import Dataset, DatasetWhole, DatasetWhole_clasif, Dataset_alternative_bin
+from misc.dataset import Dataset, DatasetWhole
 from misc.helpers import normalizeRNA,save_embedding
 from misc.classification import classify
 
@@ -39,7 +40,8 @@ from sklearn.preprocessing import LabelBinarizer
 dataset = DatasetWhole('W')
 
 targets = ['icnp', 'pam50np', 'ernp', 'drnp','hist_typnp','total_scorenp', 'tubule_scorenp', 'lymphonp', 'nuc_pleonp', 'overall_gradenp']
-modalities = ['rnanp', 'cnanp', 'clin', 'img_rhonp', 'img_snp', 'img_vnp']
+modalities = ['img_rhonp', 'img_snp', 'img_vnp','rnanp', 'cnanp', 'clin']
+#modalities = ['rnanp', 'cnanp', 'clin']
 
 
 

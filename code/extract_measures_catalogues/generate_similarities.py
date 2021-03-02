@@ -8,8 +8,9 @@ K = sys.argv[3]
 print(file)
 print(Y)
 
+X_t=Table.read('/home/ICM_CG/Projects/METABRIC/level2_catalogues/'+str(os.path.splitext(file)[0])+'.fits', format='fits')
 
-X_t=Table.read('/local/scratch/ha376/ICM/Imaging_data/digital_pathology_integration/data/catalogues/'+str(os.path.splitext(file)[0])+'.fits', format='fits')
+#X_t=Table.read('/local/scratch/ha376/ICM/Imaging_data/digital_pathology_integration/data/catalogues/'+str(os.path.splitext(file)[0])+'.fits', format='fits')
 
 print('./'+str(os.path.splitext(file)[0])+'.fits')
 print('^good')

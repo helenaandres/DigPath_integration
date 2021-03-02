@@ -26,7 +26,8 @@ type_to_data = {
     
     'overall_grade': "/local/scratch/ha376ICM/Imaging_data/digital_pathology_integration/data/modalities/stratified/data/5-fold_overall_gradestratified",
     
-    'W': "/local/scratch/ha376ICM/Imaging_data/digital_pathology_integration/data/modalities/images/",    
+    #'W': "/local/scratch/ha376ICM/Imaging_data/digital_pathology_integration/data/modalities/images/",    
+    'W': "/home/ICM_CG/Projects/METABRIC/DigPath_integration/code/extract_measures_catalogues/results",    
 }
 
 
@@ -54,7 +55,8 @@ class DatasetWhole:
 
     def _get_data(self, dtype):
         foldpath = os.path.join(type_to_data[dtype])
-        train_file = glob.glob(foldpath + "/*k50.csv")
+        #train_file = glob.glob(foldpath + "/*k10.csv")
+        train_file = glob.glob(foldpath + "/newIDs_data_combined_unique_k10.csv")
         
 
         for file_ in train_file:

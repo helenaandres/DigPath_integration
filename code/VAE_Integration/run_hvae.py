@@ -240,7 +240,8 @@ else:
 
     print('TRAINING on the fold '+ format(args.fold))
     
-    dataset = Dataset(args.dtype, args.fold)
+    #dataset = Dataset(args.dtype, args.fold)
+    dataset = Dataset('W-fold', args.fold)
 
     if (args.integration == 'Clin+mRNA+CNA'): #integrate Clin+mRNA+CNA
         s1_train = dataset.train['clin'] 

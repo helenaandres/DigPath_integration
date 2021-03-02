@@ -8,7 +8,8 @@ import os
 
 import argparse
 
-from misc.dataset import Dataset, DatasetWhole, DatasetWhole_clasif, Dataset_alternative_bin
+#from misc.dataset import Dataset, DatasetWhole, DatasetWhole_clasif, Dataset_alternative_bin
+from misc.dataset import Dataset, DatasetWhole
 from misc.helpers import normalizeRNA,save_embedding
 from misc.classification import classify
 
@@ -154,7 +155,7 @@ results = np.array(results)
 print(results)        
 colnames = ['target','input','classifier','train_roc_auc','test_roc_auc']
 results_df = pd.DataFrame(data=results, columns=colnames)    
-results_df.to_csv('./analysis_concat/results_clasif_Concat_k50_v1.csv')
+results_df.to_csv('./results/results_clasif_Concat_k50_v1.csv')
 
 
 
